@@ -1,6 +1,3 @@
-const ingredientsEl = document.querySelector('#ingredients');
-console.log(ingredientsEl);
-
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -10,48 +7,21 @@ const ingredients = [
   'Condiments',
 ];
 
+const ingredientsEl = document.querySelector('#ingredients');
+
+const list = [];
+
 for (let i = 0; i < ingredients.length; i += 1) {
   const option = ingredients[i];
   
-  const list = document.createElement('li');
+  const element = document.createElement('li');
 
-  list.classList.add('item');
-  list.textContent = option;
+  element.classList.add('item');
 
-  ingredientsEl.append(list);
+  element.textContent = option;
+  list.push(element);
+
 }
-
-
-
-// const elements = [];
-
-// const makeIngradientsList = () => {
-// const ingredientsEl = document.querySelector('#ingredients');
-//   console.log(ingredientsEl);
-  
-//   // const elements = [];
-
-// for (let i = 0; i < ingredients.length; i += 1) {
-//   const option = ingredients[i];
-  
-//   const list = document.createElement('li');
-
-//   list.classList.add('item');
-//   list.textContent = option;
-
-
-//   ingredientsEl.append(list);
-
-//   return ingredientsEl;
-// }
-//   console.log(makeIngradientsList(ingredientsEl));
-// }
-
-
-
-
-
-
-
+ingredientsEl.append(...list);
 
 

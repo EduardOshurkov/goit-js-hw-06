@@ -14,7 +14,7 @@ function onFormSubmit(event) {
         else {
             event.currentTarget.reset();
         }
-        console.log('onFormSubmit -> name', name);
-        console.log('onFormSubmit -> value', value);
+        console.log({name, value});
+     
     });
 }
