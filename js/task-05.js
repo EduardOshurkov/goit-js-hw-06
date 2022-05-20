@@ -7,5 +7,4 @@ const onOutputChange = (event) => {
     ? textOutputEl.textContent = "Anonymous"
     : textOutputEl.textContent = event.currentTarget.value
 }
-
 placeholderEl.addEventListener("input", onOutputChange)
