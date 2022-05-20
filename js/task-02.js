@@ -7,6 +7,7 @@ const ingredients = [
   'Condiments',
 ];
 
+
 const ingredientsEl = document.querySelector('#ingredients');
 
 const list = [];
