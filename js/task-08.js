@@ -10,6 +10,7 @@ function onFormSubmit(event) {
     formData.forEach((value, name) => {
         if (value === "" || name === "") {
             alert('Укажите свои данные')
+            return;
         }
         else {
             event.currentTarget.reset();
