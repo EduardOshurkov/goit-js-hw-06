@@ -5,17 +5,19 @@ form.addEventListener("submit", onFormSubmit);
 function onFormSubmit(event) {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
+    const {
+    elements: { email, password },
+  } = event.currentTarget;
     
-    formData.forEach((value, name) => {
-        if (value === "" || name === "") {
-            alert('Укажите свои данные')
-            return;
-        }
-        else {
-            event.currentTarget.reset();
-        }
-        console.log({name, value});
-     
-    });
+    if (email.value === "" || password.value === "") {
+        return alert('Укажите полные данные')
+    }
+        const result = {
+        email: email.value,
+        password: password.value,
+    };
+
+  console.log(result);
+
+  event.currentTarget.reset();
 }
